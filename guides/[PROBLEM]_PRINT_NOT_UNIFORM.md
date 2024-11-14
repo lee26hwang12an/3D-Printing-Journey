@@ -18,6 +18,8 @@ Printing goes fine until it reaches certain areas or zones on the print bed, wit
 
 When this happens, it tends to trace back to the fact that either the bed is not leveled properly, or the gantry is slanted, making the nozzle's trajectory across the bed a non-horizontal path. In this case, the mechanical misalignment of the printer is at fault. Make sure to level the bed properly, as well as check if the nozzle gantry is as close to being parallel to the printer's base as possible. There have been tons of online guides on both leveling your heat bed and gantry, do check them out, or find [my own written guide](guides/[GUIDE]_BED_GANTRY_LEVELING.md) for this. What I suggest, however, is that you take all of them guides as references, and designate your own way of calibrating the mechanical properties of the machine.
 
+![Unleveled bed and gantry](../assets/unleveled_printer.png)
+
 `Verify that both your bed and the gantry are leveled`
 
 `Clean your bed surface and guiding rails with alcohol`
@@ -28,6 +30,16 @@ When it comes to printing profiles and configurations, there are countless facto
 
 `Different Cura/Slicer versions/variations can result in different print quality`
 
-Okay, once you chose your Cura software version or variation, I highly suggest that you stick to it for literally ever. Now to the real thing, the first thing that should come to your mind when tuning your profile under this circumstance is ***Z-offset***. Again, there have been numerous articles and guides online about calibrating your printer's Z-offset value, and if I had the time, I could have written another whole guide about this matter. But generally, you should not stress yourself out trying to find the best value. ***Here's a quick guide***, given that you are suspecting that your Z-offset is the problem: Make a 3D model of a very large yet flat plane (not air plane, the plain plane), and print the first few layers. Observe as it prints
+Okay, once you chose your Cura software version or variation, I highly suggest that you stick to it for literally ever. Now to the real thing, the first thing that should come to your mind when tuning your profile under this circumstance is ***Z-offset***. Again, there have been numerous articles and guides online about calibrating your printer's Z-offset value, and if I had the time, I could have written another whole guide about this matter.
+
+![Z-offset too high](../assets/z_offset_too_high.png)
+
+`Too high value of Z-offset makes the filament unable to adhere properly`
+
+But generally, you should not stress yourself out trying to find the best value. ***Here's a quick guide***, given that you are suspecting that your Z-offset is the problem: Make a 3D model of a very large yet flat plane (not an air plane, the plain plane), and print the first few layers. Observe as it prints, pay very close attention to the appearance of the extruded lines. If the lines are too thin, or are separated from one another, lower your Z-offset value by a bit, then continue observing. Repeat until the extruded lines are very clearly pronounced, and no gaps are visible between them, and they stick firmly to the bed surface. Below is a very good image to follow. Again, don't tear your hair out trying to match the perfect Z-offset result, because 90% of the time you won't be able to. One rule of thumb is that if you still can see the bed surface between the lines then you are still too high. Also, it's better to have a slightly lower Z-offset, than a higher one:
+
+![Z-offset first layer](../assets/firstlayer2.jpg)
+
+`It's always better to have Z-offset too close to the bed, than having it too far`
 
 #### [BACK TO LIST OF ISSUES](../ENCOUNTERED_ISSUES.md)
